@@ -13,7 +13,10 @@ const client = new ApolloClient({
 
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <Pages />
+    <ApolloProvider client={client}>
+      <GlobalStyles />
+      <Pages />
+
+    </ApolloProvider>
   </React.StrictMode>
 );
